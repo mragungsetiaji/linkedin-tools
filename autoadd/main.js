@@ -4,7 +4,7 @@ function scrollDown(height, countOfPagesScrolled){
     scroll(0, document.body.clientHeight);
     setTimeout(function(){
         if(height != document.body.clientHeight && countOfPagesScrolled > 0){
-            scrollDown(document.body.clientHeight, --countOfPagesScrollled);
+            scrollDown(document.body.clientHeight, --countOfPagesScrolled);
         }else{
             return sendRequest();
         }
@@ -16,7 +16,7 @@ function sendRequest(){
     jQuery.each($('.buttton-secondary-small'), function(){
         contactsNum++;
         $(this).click();
-        console.log($(this).attr('title') + ' ' + contactsSum);
+        console.log($(this).attr('title') + ' ' + contactsNum);
     });
     console.log('Baru aja nambahin koneksi sebanyak:' + contactsNum);
 }
